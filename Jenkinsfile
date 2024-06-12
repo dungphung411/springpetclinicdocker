@@ -11,5 +11,11 @@ pipeline {
                 bat "mvn clean compile"
             }
         }
+        stage('Docker Build') {
+          agent any
+           steps {
+             bat 'docker build -t mdngphg411/spring-petclinic:latest .'
+      }
+    }
    }
 }
