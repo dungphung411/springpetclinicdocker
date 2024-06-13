@@ -11,7 +11,7 @@ pipeline {
                 bat "mvn clean compile"
             }
         }
-        stage('Docker Build') {./mvnw package
+        stage('Docker Build') {
           agent any
            steps {
              bat 'docker build -t mdp/spring-petclinic:latest .'
