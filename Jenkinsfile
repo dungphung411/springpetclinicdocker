@@ -14,7 +14,7 @@ pipeline {
         stage('Docker Build') {
           agent any
            steps {
-             bat 'docker build -t mdp/spring-petclinic:latest .'
+             bat 'docker build -t mdngphg411/spring-petclinic:latest .'
       }
     }
    }
